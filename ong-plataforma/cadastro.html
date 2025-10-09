@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma de uma ONG com projetos, voluntariado e doações.">
+  <title>ONG Solidária — Cadastro</title>
+  <link rel="icon" href="./imagens/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="./imagens/logo.svg">
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      padding: 1rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    nav a {
+      margin-right: .75rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card {
+      border: 1px solid #e2e8f0;
+      border-radius: .75rem;
+      padding: 1rem;
+      margin: .75rem 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 720px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    footer {
+      border-top: 1px solid #e2e8f0;
+      color: #475569;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container" role="banner">
+    <img src="./imagens/logo.svg" alt="Logotipo da ONG Solidária" width="120" height="40">
+    <div>
+      <h1 style="margin:0;">ONG Solidária</h1>
+      <p style="margin:0;">Missão: promover impacto social por meio de educação, saúde e inclusão.</p>
+    </div>
+  </header>
+  <nav class="container" aria-label="Navegação principal">
+    <a href="./index.html">Início</a>
+    <a href="./projetos.html">Projetos</a>
+    <a href="./cadastro.html">Cadastro</a>
+  </nav>
+  <main class="container">
+
+    <article>
+      <header>
+        <h2>Cadastro</h2>
+        <p>Preencha seus dados para se cadastrar como voluntário ou apoiador.</p>
+      </header>
+
+      <form action="#" method="post" aria-describedby="instrucao-campos" class="card">
+        <p id="instrucao-campos">Os campos marcados com * são obrigatórios.</p>
+
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+
+          <label for="nome">Nome Completo *</label>
+          <input id="nome" name="nome" type="text" required minlength="3" autocomplete="name"
+            placeholder="Seu nome completo">
+
+          <label for="email">E-mail *</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+
+          <label for="cpf">CPF *</label>
+          <input id="cpf" name="cpf" type="text" inputmode="numeric" required maxlength="14"
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" aria-describedby="cpfDica">
+
+          <small id="cpfDica">Formato: 000.000.000-00</small>
+
+          <label for="telefone">Telefone *</label>
+          <input id="telefone" name="telefone" type="tel" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+            placeholder="(11) 90000-0000">
+
+          <label for="nascimento">Data de Nascimento *</label>
+          <input id="nascimento" name="nascimento" type="date" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+
+          <label for="endereco">Endereço *</label>
+          <input id="endereco" name="endereco" type="text" required autocomplete="address-line1"
+            placeholder="Rua, número e complemento">
+
+          <label for="cep">CEP *</label>
+          <input id="cep" name="cep" type="text" inputmode="numeric" required maxlength="9" pattern="\d{5}-\d{3}"
+            placeholder="00000-000">
+
+          <label for="cidade">Cidade *</label>
+          <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
+
+          <label for="estado">Estado (UF) *</label>
+          <select id="estado" name="estado" required autocomplete="address-level1">
+            <option value="">Selecione</option>
+            <option>AC</option>
+            <option>AL</option>
+            <option>AP</option>
+            <option>AM</option>
+            <option>BA</option>
+            <option>CE</option>
+            <option>DF</option>
+            <option>ES</option>
+            <option>GO</option>
+            <option>MA</option>
+            <option>MT</option>
+            <option>MS</option>
+            <option>MG</option>
+            <option>PA</option>
+            <option>PB</option>
+            <option>PR</option>
+            <option>PE</option>
+            <option>PI</option>
+            <option>RJ</option>
+            <option>RN</option>
+            <option>RS</option>
+            <option>RO</option>
+            <option>RR</option>
+            <option>SC</option>
+            <option>SP</option>
+            <option>SE</option>
+            <option>TO</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interesse</legend>
+          <label for="tipo">Quero me cadastrar como</label>
+          <select id="tipo" name="tipo">
+            <option>Voluntário</option>
+            <option>Doador</option>
+            <option>Apoiador</option>
+          </select>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4"
+            placeholder="Conte um pouco sobre você e como deseja ajudar."></textarea>
+        </fieldset>
+
+        <p aria-live="polite" id="feedback" class="sr-only"></p>
+
+        <button type="submit">Enviar cadastro</button>
+        <button type="reset">Limpar</button>
+      </form>
+      <section aria-labelledby="privacidade">
+        <h3 id="privacidade">Privacidade</h3>
+        <p>Seus dados serão utilizados apenas para fins de cadastro e contato relacionados às atividades da ONG.</p>
+      </section>
+    </article>
+
+  </main>
+  <footer class="container" role="contentinfo">
+    <p>&copy; <span id="ano"></span> ONG Solidária • Contato: <a
+        href="mailto:contato@ongsolidaria.org">contato@ongsolidaria.org</a> • Tel: (11) 4000-0000</p>
+    <p><small>Este protótipo foi criado para a disciplina de Fundamentos da Web (HTML5 semântico, formulários e
+        multimídia).</small></p>
+  </footer>
+  <script src="./scripts/mascaras.js" defer></script>
+  
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

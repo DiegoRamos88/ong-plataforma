@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma de uma ONG com projetos, voluntariado e doações.">
+  <title>ONG Solidária — Projetos</title>
+  <link rel="icon" href="./imagens/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="./imagens/logo.svg">
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      padding: 1rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    nav a {
+      margin-right: .75rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card {
+      border: 1px solid #e2e8f0;
+      border-radius: .75rem;
+      padding: 1rem;
+      margin: .75rem 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 720px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    footer {
+      border-top: 1px solid #e2e8f0;
+      color: #475569;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container" role="banner">
+    <img src="./imagens/logo.svg" alt="Logotipo da ONG Solidária" width="120" height="40">
+    <div>
+      <h1 style="margin:0;">ONG Solidária</h1>
+      <p style="margin:0;">Missão: promover impacto social por meio de educação, saúde e inclusão.</p>
+    </div>
+  </header>
+  <nav class="container" aria-label="Navegação principal">
+    <a href="./index.html">Início</a>
+    <a href="./projetos.html">Projetos</a>
+    <a href="./cadastro.html">Cadastro</a>
+  </nav>
+  <main class="container">
+
+    <article>
+      <header>
+        <h2>Projetos Sociais</h2>
+        <p>Conheça nossas iniciativas e como participar como voluntário ou apoiador.</p>
+      </header>
+
+      <section class="grid" aria-label="Lista de projetos">
+        <article class="card">
+          <h3>Projeto Educação para Todos</h3>
+          <figure>
+            <img src="./imagens/projeto1.svg" alt="Alunos em sala de aula com material educativo">
+            <figcaption>Aulas de reforço escolar e tecnologia.</figcaption>
+          </figure>
+          <p>Oferecemos reforço escolar e iniciação em tecnologia para crianças do ensino fundamental.</p>
+          <p><strong>Como ajudar:</strong> seja voluntário como mentor ou faça uma doação.</p>
+          <p>
+            <a href="./cadastro.html">Quero ser voluntário</a> ·
+            <a href="#" aria-disabled="true" tabindex="-1">Doe agora (em breve)</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Saúde na Comunidade</h3>
+          <figure>
+            <img src="./imagens/voluntarios.svg" alt="Profissionais de saúde atendendo a comunidade">
+            <figcaption>Mutirões de atendimento básico e orientação.</figcaption>
+          </figure>
+          <p>Mutirões de cuidados básicos com foco em prevenção e orientação.</p>
+          <p><strong>Como ajudar:</strong> participe dos eventos mensais.</p>
+          <p>
+            <a href="./cadastro.html">Quero participar</a>
+          </p>
+        </article>
+      </section>
+
+      <aside class="card" aria-label="Informações adicionais">
+        <h3>Transparência e Resultados</h3>
+        <p>Indicadores de impacto e relatórios de prestação de contas estarão disponíveis nesta página.</p>
+      </aside>
+    </article>
+
+  </main>
+  <footer class="container" role="contentinfo">
+    <p>&copy; <span id="ano"></span> ONG Solidária • Contato: <a
+        href="mailto:contato@ongsolidaria.org">contato@ongsolidaria.org</a> • Tel: (11) 4000-0000</p>
+    <p><small>Este protótipo foi criado para a disciplina de Fundamentos da Web (HTML5 semântico, formulários e
+        multimídia).</small></p>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

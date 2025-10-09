@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma de uma ONG com projetos, voluntariado e doações.">
+  <title>ONG Solidária — Início</title>
+  <link rel="icon" href="./imagens/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="./imagens/logo.svg">
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      padding: 1rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    nav a {
+      margin-right: .75rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card {
+      border: 1px solid #e2e8f0;
+      border-radius: .75rem;
+      padding: 1rem;
+      margin: .75rem 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 720px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    footer {
+      border-top: 1px solid #e2e8f0;
+      color: #475569;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container" role="banner">
+    <img src="./imagens/logo.svg" alt="Logotipo da ONG Solidária" width="120" height="40">
+    <div>
+      <h1 style="margin:0;">ONG Solidária</h1>
+      <p style="margin:0;">Missão: promover impacto social por meio de educação, saúde e inclusão.</p>
+    </div>
+  </header>
+  <nav class="container" aria-label="Navegação principal">
+    <a href="./index.html">Início</a>
+    <a href="./projetos.html">Projetos</a>
+    <a href="./cadastro.html">Cadastro</a>
+  </nav>
+  <main class="container">
+
+    <article>
+      <header>
+        <h2>Sobre a Organização</h2>
+      </header>
+      <section aria-labelledby="missao">
+        <h3 id="missao">Missão, Visão e Valores</h3>
+        <p><strong>Missão:</strong> Transformar realidades por meio de programas de educação e saúde.</p>
+        <p><strong>Visão:</strong> Ser referência em impacto social sustentável.</p>
+        <p><strong>Valores:</strong> Transparência, empatia, colaboração e inovação.</p>
+        <figure>
+          <img src="./imagens/voluntarios.svg" alt="Voluntários reunidos em ação comunitária">
+          <figcaption>Equipe de voluntários em ação.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="contato">
+        <h3 id="contato">Informações de Contato</h3>
+        <address>
+          <p>Rua da Solidariedade, 1000 — São Paulo/SP</p>
+          <p>E-mail: <a href="mailto:contato@ongsolidaria.org">contato@ongsolidaria.org</a></p>
+          <p>Telefone: (11) 4000-0000</p>
+        </address>
+      </section>
+
+      <section aria-labelledby="transparencia">
+        <h3 id="transparencia">Transparência</h3>
+        <p>Confira nossos <a href="#" aria-label="Relatórios de transparência (em breve)" aria-disabled="true" tabindex="-1">relatórios anuais (em breve)</a> e
+          indicadores de impacto.</p>
+        <!-- Vídeo institucional removido temporariamente porque não há arquivo apontado. Adicionar <video> novamente quando o arquivo estiver disponível. -->
+      </section>
+    </article>
+
+  </main>
+  <footer class="container" role="contentinfo">
+    <p>&copy; <span id="ano"></span> ONG Solidária • Contato: <a
+        href="mailto:contato@ongsolidaria.org">contato@ongsolidaria.org</a> • Tel: (11) 4000-0000</p>
+    <p><small>Este protótipo foi criado para a disciplina de Fundamentos da Web (HTML5 semântico, formulários e
+        multimídia).</small></p>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
