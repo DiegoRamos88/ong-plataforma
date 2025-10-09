@@ -23,5 +23,3 @@ Como testar localmente
 3. No `cadastro.html` teste a validação e as máscaras preenchendo o formulário e enviando.
 
 ---
-
-Arquivo simplificado; removidos detalhes de publicação, checklist e instruções de Git/GitHub.
