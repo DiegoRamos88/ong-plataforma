@@ -128,4 +128,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (first && typeof first.focus === 'function') first.focus();
     }, 10);
   };
+    // === Alternar modo de alto contraste ===
+    const btn = document.getElementById('contraste-toggle');
+
+    if (btn) {
+    btn.addEventListener('click', () => {
+        const on = document.body.classList.toggle('alto-contraste');
+        btn.setAttribute('aria-pressed', String(on));
+    });
+    }
 });
