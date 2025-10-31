@@ -315,8 +315,26 @@ header p {
     z-index: 1000; /* acima do header */
   }
 
-  /* quando o menu está aberto */
-  .main-nav.open .nav-list {
-    transform: translateX(0);
-  }
+/* quando o menu está aberto */
+.main-nav.open .nav-list {
+  transform: translateX(0);
+}
+
+  /* Acessibilidade — foco visível para navegação por teclado */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* links do menu também precisam de foco (não só hover) */
+.main-nav a:focus-visible::after { width: 100%; }
+
+/* alto contraste/dark mode alternável por classe no body */
+body.alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.alto-contraste a { color: #0ff !important; }
+
 }
