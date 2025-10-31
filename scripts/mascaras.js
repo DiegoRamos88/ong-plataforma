@@ -48,7 +48,13 @@ function setFeedback(msg) {
   if (!el) return;
   el.textContent = msg;
   el.classList.remove('sr-only');
-  setTimeout(() => el.classList.add('sr-only'), 3500);
+  // apply alert role and default to info
+  el.classList.add('alert', 'info');
+  // remove after timeout (keep DOM aria-live for screen readers)
+  setTimeout(() => {
+    el.classList.add('sr-only');
+    el.classList.remove('alert', 'info');
+  }, 3500);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

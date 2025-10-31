@@ -30,8 +30,8 @@
       <li>
         <a href="./projetos.html">Projetos</a>
         <div class="submenu" role="menu">
-          <a href="./projetos.html#educacao">Educação</a>
-          <a href="./projetos.html#saude">Saúde</a>
+          <a href="./educacao.html">Educação</a>
+          <a href="./voluntariado.html">Voluntariado</a>
         </div>
       </li>
       <li><a href="./cadastro.html">Cadastro</a></li>
@@ -45,49 +45,57 @@
         <p>Preencha seus dados para se cadastrar como voluntário ou apoiador.</p>
       </header>
 
-      <form action="#" method="post" aria-describedby="instrucao-campos" class="card">
-        <p id="instrucao-campos">Os campos marcados com * são obrigatórios.</p>
+      <form action="#" method="post" aria-describedby="instrucao-campos" class="card container grid-12">
+        <div class="col-12">
+          <p id="instrucao-campos">Os campos marcados com * são obrigatórios.</p>
+        </div>
 
-        <fieldset>
+        <fieldset class="col-12">
           <legend>Dados Pessoais</legend>
-
-          <label for="nome">Nome Completo *</label>
-          <input id="nome" name="nome" type="text" required minlength="3" autocomplete="name"
-            placeholder="Seu nome completo">
-
-          <label for="email">E-mail *</label>
-          <input id="email" name="email" type="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
-
-          <label for="cpf">CPF *</label>
-          <input id="cpf" name="cpf" type="text" inputmode="numeric" required maxlength="14"
-            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" aria-describedby="cpfDica">
-
-          <small id="cpfDica">Formato: 000.000.000-00</small>
-
-          <label for="telefone">Telefone *</label>
-          <input id="telefone" name="telefone" type="tel" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
-            placeholder="(11) 90000-0000">
-
-          <label for="nascimento">Data de Nascimento *</label>
-          <input id="nascimento" name="nascimento" type="date" required>
+          <div class="grid-12">
+            <div class="col-6">
+              <label for="nome">Nome Completo *</label>
+              <input id="nome" name="nome" type="text" required minlength="3" autocomplete="name" placeholder="Seu nome completo">
+            </div>
+            <div class="col-6">
+              <label for="email">E-mail *</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+            </div>
+            <div class="col-6">
+              <label for="cpf">CPF *</label>
+              <input id="cpf" name="cpf" type="text" inputmode="numeric" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" aria-describedby="cpfDica">
+              <small id="cpfDica">Formato: 000.000.000-00</small>
+            </div>
+            <div class="col-6">
+              <label for="telefone">Telefone *</label>
+              <input id="telefone" name="telefone" type="tel" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(11) 90000-0000">
+            </div>
+            <div class="col-6">
+              <label for="nascimento">Data de Nascimento *</label>
+              <input id="nascimento" name="nascimento" type="date" required>
+            </div>
+          </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="col-12">
           <legend>Endereço</legend>
 
-          <label for="endereco">Endereço *</label>
-          <input id="endereco" name="endereco" type="text" required autocomplete="address-line1"
-            placeholder="Rua, número e complemento">
-
-          <label for="cep">CEP *</label>
-          <input id="cep" name="cep" type="text" inputmode="numeric" required maxlength="9" pattern="\d{5}-\d{3}"
-            placeholder="00000-000">
-
-          <label for="cidade">Cidade *</label>
-          <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
-
-          <label for="estado">Estado (UF) *</label>
-          <select id="estado" name="estado" required autocomplete="address-level1">
+          <div class="grid-12">
+            <div class="col-8">
+              <label for="endereco">Endereço *</label>
+              <input id="endereco" name="endereco" type="text" required autocomplete="address-line1" placeholder="Rua, número e complemento">
+            </div>
+            <div class="col-4">
+              <label for="cep">CEP *</label>
+              <input id="cep" name="cep" type="text" inputmode="numeric" required maxlength="9" pattern="\d{5}-\d{3}" placeholder="00000-000">
+            </div>
+            <div class="col-6">
+              <label for="cidade">Cidade *</label>
+              <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
+            </div>
+            <div class="col-6">
+              <label for="estado">Estado (UF) *</label>
+              <select id="estado" name="estado" required autocomplete="address-level1">
             <option value="">Selecione</option>
             <option>AC</option>
             <option>AL</option>
@@ -117,9 +125,11 @@
             <option>SE</option>
             <option>TO</option>
           </select>
+            </div>
+          </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="col-12">
           <legend>Interesse</legend>
           <label for="tipo">Quero me cadastrar como</label>
           <select id="tipo" name="tipo">
@@ -128,14 +138,15 @@
             <option>Apoiador</option>
           </select>
           <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="4"
-            placeholder="Conte um pouco sobre você e como deseja ajudar."></textarea>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre você e como deseja ajudar."></textarea>
         </fieldset>
 
         <p aria-live="polite" id="feedback" class="sr-only"></p>
 
-        <button type="submit">Enviar cadastro</button>
-        <button type="reset">Limpar</button>
+        <div class="col-12" style="display:flex; gap:12px;">
+          <button type="submit" class="btn">Enviar cadastro</button>
+          <button type="reset" class="btn secondary">Limpar</button>
+        </div>
       </form>
       <section aria-labelledby="privacidade">
         <h3 id="privacidade">Privacidade</h3>

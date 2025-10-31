@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto Educação — ONG Solidária">
+  <title>Projeto Educação — ONG Solidária</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <header class="container" role="banner">
+    <img src="./imagens/logo.svg" alt="Logotipo da ONG Solidária" width="120" height="40">
+    <div>
+      <h1>Projeto Educação</h1>
+      <p>Programas de reforço escolar e oficinas de tecnologia.</p>
+    </div>
+  </header>
+
+  <nav class="container main-nav" aria-label="Navegação principal">
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-list">
+      <li><a href="./index.html">Início</a></li>
+      <li>
+        <a href="./projetos.html">Projetos</a>
+        <div class="submenu" role="menu">
+          <a href="./educacao.html">Educação</a>
+          <a href="./voluntariado.html">Voluntariado</a>
+        </div>
+      </li>
+      <li><a href="./cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <article class="card">
+      <h2>Educação para Todos</h2>
+      <figure>
+        <img src="./imagens/projeto1.svg" alt="Alunos em sala de aula com material educativo">
+        <figcaption>Aulas de reforço escolar e tecnologia.</figcaption>
+      </figure>
+      <p>Oferecemos reforço escolar, tutoria e oficinas de iniciação à programação para crianças do ensino
+        fundamental. Nosso objetivo é reduzir a evasão escolar e estimular o interesse por tecnologia.</p>
+      <h3>Atividades</h3>
+      <ul>
+        <li>Aulas de reforço (matemática, português)</li>
+        <li>Oficinas de informática e robótica</li>
+        <li>Mentoria para estudantes em parceria com universidades</li>
+      </ul>
+      <p><a href="./cadastro.html" class="btn">Quero ser voluntário</a></p>
+    </article>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <p>&copy; <span id="ano"></span> ONG Solidária</p>
+  </footer>
+
+  <script src="./scripts/ui.js" defer></script>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
